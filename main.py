@@ -69,7 +69,7 @@ def display_jupiter_page():
         st.markdown(image_border_color, unsafe_allow_html=True)
 
         col1.markdown("<div class='st-emotion-cache-1kyxreq e115fcil2'>", unsafe_allow_html=True)
-        col1.image("images/candidate1.png", width=220)
+        col1.image("images/candidate1.png", width=200)
         col1.markdown(f"<p class='st-emotion-cache-1o1eenq e1nzilvr5' style='font-size: 18px;'>{candidate1}</p>", unsafe_allow_html=True)
         col1.markdown("</div>", unsafe_allow_html=True)
 
@@ -79,7 +79,7 @@ def display_jupiter_page():
         col1.markdown("</div>", unsafe_allow_html=True)
 
         col2.markdown("<div class='st-emotion-cache-1kyxreq e115fcil2'>", unsafe_allow_html=True)
-        col2.image("images/candidate2.png", width=130)
+        col2.image("images/candidate2.png", width=200)
         col2.markdown(f"<p class='st-emotion-cache-1o1eenq e1nzilvr5' style='font-size: 18px;'>{candidate2}</p>", unsafe_allow_html=True)
         col2.markdown("</div>", unsafe_allow_html=True)
 
@@ -554,15 +554,14 @@ def vote(candidate, student_id, grade_section, house):
         for row_num, row in enumerate(sheet.iter_rows(min_row=2, max_row=sheet.max_row, values_only=True), start=2):
             if str(row[0]) == student_id and row[2].lower() == grade_section.lower() and row[3].lower() == house.lower():
                 id_found = True
-                
-                # Update the candidate in column F
-                sheet.cell(row=row_num, column=6, value=candidate)
-                workbook.save(data_file_path)
 
                 voting_status = row[4]
                 if voting_status == 'no':
                     sheet.cell(row=row_num, column=5, value='Yes')
                     workbook.save(data_file_path)
+                    sheet.cell(row=row_num, column=6, value=candidate)
+                    workbook.save(data_file_path)
+
                     st.success("Thank you for voting!")
 
                     update_vote_count(house.lower(), candidate.lower())
