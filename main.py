@@ -69,7 +69,7 @@ def display_jupiter_page():
         st.markdown(image_border_color, unsafe_allow_html=True)
 
         col1.markdown("<div class='st-emotion-cache-1kyxreq e115fcil2'>", unsafe_allow_html=True)
-        col1.image("images/candidate1.png", width=200)
+        col1.image("images/candidate1.png", width=220)
         col1.markdown(f"<p class='st-emotion-cache-1o1eenq e1nzilvr5' style='font-size: 18px;'>{candidate1}</p>", unsafe_allow_html=True)
         col1.markdown("</div>", unsafe_allow_html=True)
 
@@ -79,7 +79,7 @@ def display_jupiter_page():
         col1.markdown("</div>", unsafe_allow_html=True)
 
         col2.markdown("<div class='st-emotion-cache-1kyxreq e115fcil2'>", unsafe_allow_html=True)
-        col2.image("images/candidate2.png", width=200)
+        col2.image("images/candidate2.png", width=130)
         col2.markdown(f"<p class='st-emotion-cache-1o1eenq e1nzilvr5' style='font-size: 18px;'>{candidate2}</p>", unsafe_allow_html=True)
         col2.markdown("</div>", unsafe_allow_html=True)
 
