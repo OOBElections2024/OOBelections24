@@ -74,7 +74,7 @@ def display_jupiter_page():
         col1.markdown("</div>", unsafe_allow_html=True)
 
         col1.markdown("<div class='st-emotion-cache-1kyxreq e115fcil2'>", unsafe_allow_html=True)
-        col1.image("images/image1.png", width=200)
+        col1.image("images/image1.png", width=130)
         col1.markdown(f"<p class='st-emotion-cache-1o1eenq e1nzilvr5' style='font-size: 18px;'></p>", unsafe_allow_html=True)
         col1.markdown("</div>", unsafe_allow_html=True)
 
